@@ -11,10 +11,7 @@ export default function NavBar() {
             <Link href="/about">
                 <a className={router.pathname === "/about" ? "active" : null}>About</a>
             </Link>
-            <style jsx>{`                
-                nav {
-                    background-color: tomato;
-                }
+            <style jsx>{`                                
                 a{
                     text-decoration: none;
                 }
