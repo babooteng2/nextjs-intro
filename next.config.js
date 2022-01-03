@@ -1,7 +1,16 @@
+const { redirect } = require("next/dist/server/api-utils");
+
 const API_KEY = process.env.API_KEY;
 const BASE_URL = "https://api.themoviedb.org/3";
 module.exports = {
   reactStrictMode: true,
+  async redirects() {
+    return [{
+      source: "/old-blog/:path*",
+      destination: "/new-blog/:path*",
+      permanent: false,
+    }]
+  },
   async rewrites() {
     return [{
       source: "/api/movies",
