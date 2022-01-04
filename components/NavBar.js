@@ -6,12 +6,14 @@ export default function NavBar() {
     return (
         <nav>
             <img src="/vercel.svg" />
-            <Link href="/">
-                <a className={router.pathname === "/" ? "active" : null}>Home</a>
-            </Link>
-            <Link href="/about">
-                <a className={router.pathname === "/about" ? "active" : null}>About</a>
-            </Link>
+            <div>
+                <Link href="/">
+                    <a className={router.pathname === "/" ? "active" : null}>Home</a>
+                </Link>
+                <Link href="/about">
+                    <a className={router.pathname === "/about" ? "active" : null}>About</a>
+                </Link>
+            </div>
             <style jsx>{`        
                 nav {
                 display: flex;
