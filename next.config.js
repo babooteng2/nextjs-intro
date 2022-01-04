@@ -1,5 +1,3 @@
-const { redirect } = require("next/dist/server/api-utils");
-
 const API_KEY = process.env.API_KEY;
 const BASE_URL = "https://api.themoviedb.org/3";
 module.exports = {
@@ -12,9 +10,15 @@ module.exports = {
     }]
   },
   async rewrites() {
-    return [{
-      source: "/api/movies",
-      destination: `${BASE_URL}/movie/popular?api_key=${API_KEY}`
-    }]
+    return [
+      {
+        source: "/api/movies",
+        destination: `${BASE_URL}/movie/popular?api_key=${API_KEY}`
+      },
+      {
+        source:"/api/movies/:id",
+        destination: `${BASE_URL}/movie/:id?api_key=${API_KEY}`
+      }
+    ]
   }
 }
