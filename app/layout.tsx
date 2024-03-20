@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default : "Next movies" 
   },
   description: 'The best Movies on the best framework',
-};
+}; 
 
 export default function RootLayout({
   children,
