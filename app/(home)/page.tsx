@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Movie from "../../components/movie"
 import styles from "../../styles/home.module.css";
 
@@ -24,7 +23,7 @@ export default async function HomePage() {
                     id={movie.id} 
                     title={movie.title} 
                     poster_path={movie.poster_path} 
-                    vote_average={movie.vote_average}
+                    vote_average={movie.vote_average.toFixed(1)}
                 />
             )}
         </div>
