@@ -24,7 +24,7 @@ export default function Movie({ id, title, poster_path, vote_average }: IMoviePr
             />
             <Link href={`/movies/${id}`}>
                 <span>{title}</span>
-                <span>{vote_average}</span>
+                <span>⭐ {vote_average}</span>
             </Link>            
         </div>
     )
