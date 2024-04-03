@@ -22,7 +22,7 @@ export default function Movie({ id, title, poster_path, vote_average }: IMoviePr
                 alt={title} 
                 onClick={onClick}
             />
-            <Link href={`/movies/${id}`}>
+            <Link prefetch href={`/movies/${id}`}>
                 <span>{title}</span>
                 <span>⭐ {vote_average}</span>
             </Link>            
